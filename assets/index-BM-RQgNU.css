@@ -1,0 +1,353 @@
+/* css 초기화 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* input number 화살표 제거/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox  */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+:root {
+  --lotto-primary: #4e5ba6;
+  --lotto-greyscale-1: #ffffff;
+  --lotto-greyscale-2: #fcfcfd;
+  --lotto-greyscale-3: #b4b4b4;
+  --lotto-greyscale-4: #8b8b8b;
+  --lotto-greyscale-5: #000000;
+
+  --font-size-title: 24px;
+  --font-size-subtitle: 20px;
+  --font-size-body: 15px;
+  --font-size-caption: 14px;
+
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
+}
+.title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 36px;
+  letter-spacing: 0;
+}
+.subtitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.placeholder {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  line-height: 16px;
+  letter-spacing: 1.25px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  padding: 0 0 0 130px;
+  background-color: var(--lotto-primary);
+  color: var(--lotto-greyscale-1);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: var(--lotto-greyscale-2);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #4e5ba633;
+  color: var(--lotto-primary);
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding: 10px;
+  border: 1px solid var(--lotto-primary);
+  border-radius: 8px;
+  background-color: var(--lotto-primary);
+  color: var(--lotto-greyscale-1);
+  cursor: pointer;
+}
+.lotto-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 24px;
+  width: 400px;
+  margin: 20px 0;
+  padding: 32px 16px;
+  border: 1px solid #0000001f;
+  background-color: var(--lotto-greyscale-1);
+}
+.lotto-section__title {
+  text-align: center;
+}
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.purchase-form__input-group {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.purchase-form__input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--lotto-greyscale-3);
+  border-radius: 8px;
+}
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  visibility: hidden;
+}
+.ticket-list__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 250px;
+  overflow: auto;
+}
+.ticket-list__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+.winning-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  visibility: hidden;
+}
+.winning-form__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.winning-form__submit-btn {
+  margin: 15px 0 0 0;
+}
+.winning-form__input {
+  width: 34px;
+  height: 36px;
+  border: 1px solid var(--lotto-greyscale-3);
+  border-radius: 6px;
+  text-align: center;
+}
+.winning-form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.winning-form__input-group--bonus {
+  align-items: end;
+}
+.winning-form__input-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+.result-modal {
+  border: none;
+  border-radius: 4px;
+}
+.result-modal::backdrop {
+  background-color: #00000080;
+}
+.result-modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 24px;
+  max-width: 400px;
+  padding: 16px;
+
+  background-color: var(--lotto-greyscale-1);
+}
+.result-modal__close-btn {
+  display: block;
+  margin: 0 0 0 auto;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.result-modal__title {
+  text-align: center;
+}
+.result-modal__tr {
+  border-top: 1px solid #0000001f;
+  border-bottom: 1px solid #0000001f;
+}
+.result-modal__td,
+.result-modal__th {
+  padding: 10px;
+  text-align: center;
+}
+.result-modal__th {
+  font-weight: 600;
+}
+.result-modal__profit {
+  text-align: center;
+}
